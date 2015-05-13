@@ -1,4 +1,6 @@
-<?php  include('config/connection.php'); ?>
+<?php  include('config/connection.php');
+            $id = $_GET['element_id'];
+ ?>
 <script>
 $(document).ready(function (e) {
   $(".parsley_form").parsley();
@@ -15,9 +17,9 @@ $(document).ready(function (e) {
             dataType:"json",
             processData:false,
             success: function(result){
-            //alert(result); 
+//            alert(result); 
              if(result[0] == 1){
-                     load_back_equip('<?=$id?>');
+                    load_back_equip('<?=$id?>');
                     $(".loading").css('display','none');
                     $(".success_error_imgages").css('display','none');
                     $(".message").html('');
@@ -43,17 +45,6 @@ $(document).ready(function (e) {
    });
     
 </script>
-<?php
-       if(isset($_GET['after_insert']) && $_GET['after_insert']=='1')
-       {
-   ?>
-   <div class="alert alert-success show_message_alert">
-   <h4>Sucssesfuly inserted!</h4>
-    </div>
-    <?php
-       }
-     ?>
-
 <!-- panel preview -->
 <div class="col-md-12 panel panel-default">
   <div class="col-md-12 custom">
@@ -61,7 +52,7 @@ $(document).ready(function (e) {
         <fieldset>
 
 <?php
-   	$id = $_GET['element_id'];
+   
 	if(isset($id)){
         if($id == 1){
 ?>

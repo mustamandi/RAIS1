@@ -42,13 +42,13 @@ $images_sequence = array();
   $location = 		""; 
   $p_source    =    "";
 
-  if(isset($_POST['roads']));
+  if(isset($_POST['roads']))
   		$name = clean($_POST['roads']);       
-  if(isset($_POST['condition']));
+  if(isset($_POST['condition']))
         $condition = clean($_POST['condition']);
-  if(isset($_POST['location']));
+  if(isset($_POST['location']))
         $location = clean($_POST['location']);    				
-  if(isset($_POST['power']));
+  if(isset($_POST['power']))
   		$p_source = clean($_POST['power']);        		
   	
 // insert data into tables
@@ -89,7 +89,8 @@ $images_sequence = array();
   		$query = "INSERT INTO `traffic_signals` VALUES (NULL, '$intersection_id','$type_tra_sig','$p_source', '$condition','$direction',
                        '$maintanance','$picture','$date_surveyed');";
   	}
-
+    //echo mysql_query($query) or die(mysql_error());
+//    exit();
 	if(mysql_query($query))
 	  {
 	      $message = "Successfuly posted";

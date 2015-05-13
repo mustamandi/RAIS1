@@ -2,6 +2,36 @@
 <?php
 include('config/connection.php');
 $id = $_GET['element_id'];
+?>
+<style>
+   .show_message_alert{
+      text-align: center;
+  border-bottom: 3px solid #B3ADAD;
+  width: 97%;
+  margin-left: -1px;
+  background: #f9f9f9;
+  position: absolute;
+  z-index: 200000;
+/*   display: none; */
+/*  background-color: rgb(92, 184, 92); */
+   }
+   
+   </style>
+   <?php
+       if(isset($_GET['after_insert']) && $_GET['after_insert']=='1')
+       {
+   ?>
+   <div class="alert alert-success show_message_alert">
+   <h4>Sucssesfuly inserted!</h4>
+    </div>
+    <?php
+       }
+     ?>
+  <div class="alert" style="text-align: center; border-bottom:3px solid #B3ADAD;width: 100%; margin-left: -1px; background:#f9f9f9;">
+          <button class="btn btn-default pull-right">Export to Excel</button>
+          <h4>Road Records ( Records)</h4>
+    </div>
+    <?php
 if(isset($id))
 {
 	if($id == 1)
@@ -38,7 +68,7 @@ if(isset($id))
 	}
 	if($id == 2)
 	{
-		$query = mysql_query("SELECT * FROM traffic_signs order by id desc");
+		$query = mysql_query("SELECT * FROM pavement_marking order by id desc");
 		if($query)
 		{
 			?>
@@ -84,7 +114,7 @@ if(isset($id))
 				?>
 					<tr>
 						<td><?= $counter ?></td>
-						<td><?= $records['no_of_street_in_100m'] ?></td>
+						<td><?= $records['no_of_stre et_in_100m'] ?></td>
 						<td><?= $records['type'] ?></td>
 						<td><?= $records['source_of_power'] ?></td>
 						<td><?= $records['no_of_streetl_need_installed'] ?></td>
