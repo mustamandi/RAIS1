@@ -10,5 +10,5 @@
 <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="assets/css/parsley.css">
 <script>
-base_url = "http://localhost:90/rais/";
+base_url = "http://localhost:8888/rais1/";
 </script>

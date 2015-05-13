@@ -100,8 +100,19 @@ function show_form(element_id)
       function show_eqi_form(element_id)
           {
               $("#addnew").html("<img src='assets/img/103.gif' class='loader-img'/>").load('equipments_forms.php', '&element_id='+element_id);
-              $("#all").html("<img src='assets/img/103.gif' class='loader-img'/>").load('equipments.php', '&element_id='+element_id);
+              $("#all").html("<img src='assets/img/103.gif' class='loader-img'/>").load('show_equipments.php', '&element_id='+element_id);
           }
+
+      // load back equipment data with success message
+      function load_back_equip(id)
+      {
+          $("#all").html("<img src='assets/img/103.gif' class='loader-img'/>").load('show_equipments.php', 'element_id='+id+'&after_insert=1');
+          $("#all-tab").click();
+          $("#add_menu").removeClass('active');
+          setTimeout(function(){
+            $(".show_message_alert").css('display','none');
+          }, 2000);
+      }
 
       function show_structures_form(element_id, table)
           {
@@ -141,6 +152,11 @@ function show_form(element_id)
     function view_structure_details(id, table)
     {
         $("#all").html("").load("show_structure_details.php", 'id='+id+'&table='+table);
+    }
+    // view road elements reports
+    function view_road_elements_report(id,element_id)
+    {
+        $("#all").html("").load("road_elements_report.php", 'id='+id+"&element_id="+element_id);
     }
     
     //print function

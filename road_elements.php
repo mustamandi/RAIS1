@@ -136,7 +136,7 @@ $(document).ready(function (e) {
                         </div>&nbsp;
                         <div class="col-sm-6 form-group pull-right">
                             <label for="under_clearance" class="control-label">Size (Height)</label>
-                            <input type="number" class="form-control" id="under_clearance" name="height" required>
+                            <input type="text" class="form-control" id="under_clearance" name="height" required>
                                     
                         </div>
                     </div>
@@ -226,7 +226,7 @@ $(document).ready(function (e) {
                     <div class="col-sm-9">
                         <div class="col-sm-6 form-group pull-left">
                             <label for="concept" class="control-label">Select Road:</label>
-                            <select name="roads" class="form-control">
+                            <select name="roads_id" class="form-control">
                                 <?php
                                    $q = mysql_query("SELECT * FROM roads");
                                 ?>
@@ -321,7 +321,7 @@ $(document).ready(function (e) {
                     <div class="col-sm-9">
                         <div class="col-sm-6 form-group pull-left">
                             <label for="concept" class="control-label">Select Road:</label>
-                            <select name="roads" class="form-control">
+                            <select name="roads_id" class="form-control">
                                 <?php
                                    $q = mysql_query("SELECT * FROM roads");
                                 ?>
@@ -417,7 +417,7 @@ $(document).ready(function (e) {
                     <div class="col-sm-9">
                         <div class="col-sm-6 form-group pull-left">
                             <label for="concept" class="control-label">Select Road:</label>
-                            <select name="roads" class="form-control">
+                            <select name="roads_id" class="form-control">
                                 <?php
                                    $q = mysql_query("SELECT * FROM roads");
                                 ?>
@@ -527,7 +527,7 @@ $(document).ready(function (e) {
                     <div class="col-sm-9">
                         <div class="col-sm-6 form-group pull-left">
                             <label for="concept" class="control-label">Select Road:</label>
-                            <select name="roads" class="form-control">
+                            <select name="roads_id" class="form-control">
                                 <?php
                                    $q = mysql_query("SELECT * FROM roads");
                                 ?>
@@ -631,7 +631,7 @@ $(document).ready(function (e) {
                     <div class="col-sm-9">
                         <div class="col-sm-6 form-group pull-left">
                             <label for="concept" class="control-label">Select Road:</label>
-                            <select name="roads" class="form-control">
+                            <select name="roads_id" class="form-control">
                                 <?php
                                    $q = mysql_query("SELECT * FROM roads");
                                 ?>
@@ -725,7 +725,7 @@ $(document).ready(function (e) {
                     <div class="col-sm-9">
                         <div class="col-sm-6 form-group pull-left">
                             <label for="concept" class="control-label">Select Road:</label>
-                            <select name="roads" class="form-control">
+                            <select name="roads_id" class="form-control">
                                 <?php
                                    $q = mysql_query("SELECT * FROM roads");
                                 ?>
